@@ -1,0 +1,14 @@
+<h1>Creatures</h1>
+
+<%= link_to 'New Creature', new_creature_path, class: 'btn btn-success' %>
+<br>
+
+<% @creatures.each do |creature| %>
+<div class="well">
+  <h2><%= creature.name %></h2>
+  <p><%= creature.content %></p>
+  <%= link_to 'Show Creature', creature, class: 'btn btn-info' %>
+  <%= link_to 'Edit Creature', edit_creature_path(creature), class: 'btn btn-warning' %>
+  <%= link_to 'Delete Creature', creature, class: 'btn btn-danger', method: :delete %>
+</div>
+<% end %>

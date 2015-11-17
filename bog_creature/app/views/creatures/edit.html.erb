@@ -1,0 +1,9 @@
+<h1>Edit Your Creatures</h1>
+
+<%= bootstrap_form_for @creature do |t| %>
+  <%= t.text_field :name %>
+  <%= t.text_area :content %>
+  
+
+  <%= t.primary %>
+<% end %>
